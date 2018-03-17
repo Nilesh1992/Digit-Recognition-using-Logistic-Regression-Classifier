@@ -25,3 +25,10 @@ Function for hypothesis = (1 / 1 + e^(-transpose(θ)*X)) where θ is the vector 
 - For multiclass classification we use one/all method where we transform the traning set one at a time to form dataset having only binar class, So if you have 4 classes to predect then you have to train 4 logistic regression models. 
 
 - To use logistic regression on any problem statment always see if the data set variables are not dependent. Also it highly computationally inappropriate to have non-linear hypothesis with large number of variables. 
+
+***Digit Recognition approach***
+- The file ex2data3.mat contains a dataset 5000 instances of digits from 0-9, where each image is a 20 × 20 image. You can visualize this data using visualize_the_digit.py script, which basically randomly selectes 100 digits to display.
+
+- Then comes the learning process where we use gradient descent algorithm for learning the parameters, before giving the traning data to the gradient descent we map the data set into binary data set using mapping_input_to_only_two_class.py script. Once the algorithm fully runs we have 10 logistic regression classifiers. Finally we use some instance to find the hypothesis of each classifier and output class having highest probablity.
+
+- The traning data has the accuracy of 91.46% which we can further improving the learing rate and lamda parameters etc.
