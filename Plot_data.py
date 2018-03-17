@@ -22,10 +22,10 @@ for i in range(0,number_of_traning_data-1):
         negative_class = numpy.append(negative_class,[input_data[i]],axis=0)
 data_x_axis = negative_class.T[0][1::] #negative_class.T[0][1::] this give use the data in range 1 to m
 data_y_axis = negative_class.T[1][1::]
-plt.plot(data_x_axis,data_y_axis,'ro')
+plt.plot(data_x_axis,data_y_axis,'yo')
 data_x_axis = positive_class.T[0][1::] #positive_class.T[0][1::] this give use the data in range 1 to m
 data_y_axis = positive_class.T[1][1::]
-plt.plot(data_x_axis,data_y_axis,'g+')
+plt.plot(data_x_axis,data_y_axis,'r+')
 theta = [[-24.932759,0.204406,0.199616]] #Linear predection
 x_range = numpy.arange(numpy.floor(numpy.min(input_data)),numpy.ceil(numpy.max(input_data)),0.01)
 y_grid,x_grid = numpy.meshgrid(x_range,x_range)
