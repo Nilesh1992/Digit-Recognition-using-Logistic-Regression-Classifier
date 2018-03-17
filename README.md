@@ -13,7 +13,15 @@ This contains 3 logistic regression models which are as follows
 
 
 ****Few important details about logistic regression to know****
-- As it's name suggest's that it is regression for predection of continious output value like linear regression , but this is actually a classification algorithm which is souly based on stastitics where we find the relation between the dependent variable and the predectors.
+- As it's name suggest's that it is regression for predection of continious output value like linear regression , but this is actually a classification algorithm which is souly based on stastitics where we find the relation between the dependent variable and the predectors variables or features.
 
-- Logistic regression uses a sigmoid function you can visualize the fuction here https://www.desmos.com/calculator/77rd7fib7e. The principal reason of using this fuction that if you feed any value to this function, it's value will always ranges in 0 to 1. And that is what logistic regression gives us i.e. P(x = 1|θ) which is the probablity of an instance which n features given learned parameters θ belongs to positive class i.e. 1.  
+- Logistic regression uses sigmoid function you can visualize the fuction here https://www.desmos.com/calculator/77rd7fib7e. The principal reason of using this fuction is that if you feed any value in range[-∞,+∞] to this function, it's value will always ranges in 0 to 1. And that is what logistic regression gives us i.e. P(Y=1|θ) which is the probablity of an instance which n features given learned parameters θ belongs to positive class i.e. 1.
+Function for hypothesis = (1 / 1 + e^(-transpose(θ)*X)) where θ is the vector and X is the matrix having one or more instances for classification.
 
+- Other importat function which as been used for calculating a cost at perticular point for logistic regression is lograthmic fuction, which you can visualize here https://www.desmos.com/calculator/77rd7fib7e. This function have important property i.e. it is an convex function which means that there is only one global minima for this. If we directly use only sigmod function for this then the cost function is highly non-convex with many local minima.
+
+- Regularization is somtheing which very import when we are trying to fint non-linear functions, because this functions try to over-fit the traning data and does not form a good decison boundry, for this we use this technique. 
+
+- For multiclass classification we use one/all method where we transform the traning set one at a time to form dataset having only binar class, So if you have 4 classes to predect then you have to train 4 logistic regression models. 
+
+- To use logistic regression on any problem statment always see if the data set variables are not dependent. Also it highly computationally inappropriate to have non-linear hypothesis with large number of variables. 
